@@ -1,0 +1,274 @@
+<template>
+  <div class="page index">
+    <nav class="top-nav">
+      <ul class="links">
+        <li><a href="#">Order Online</a></li>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Catering</a></li>
+      </ul>
+    </nav>
+    <section class="banner">
+      <h1 class="main-message">The best Pizza in GeorgeTown, MA.</h1>
+      <h2 class="sub-message">Nicolini's Pizza offers quality Pizza at very affordable prices</h2>
+    </section>
+    <nav class="shop-nav">
+      <div class="price-range">
+        <select v-model="pricerange">
+          <option :value="null" disabled>Price Range</option>
+        </select>
+      </div>
+      <div class="checkout">
+        <div class="cart">
+          <span class="count">2</span>
+          <img src="/svg/bag.svg" alt="Cart">
+        </div>
+        <button class="confirm">Confirm & Checkout</button>
+      </div>
+    </nav>
+    <section class="shop">
+      <aside class="categories">
+        <h4 class="section-title">Categories</h4>
+        <ul class="cats">
+          <li v-for="(category, catIndex) in categories" 
+              :key="catIndex" 
+              :class="{ selected: selectedCat === category }" 
+              @click="selectedCat = category">
+            <a v-text="category" />
+          </li>
+        </ul>
+      </aside>
+      <main class="specialty">
+        <h4 class="section-title">House Specialty</h4>
+        <div class="menus">
+          <div v-for="menu in 12" :key="menu" class="menu">
+            <img class="food-pic" src="/img/beef-burger-with-sides.jpg" alt="anyhow">
+            <h5 class="title">Beef burger with Sides</h5>
+            <div class="price-buy">
+              <span class="price">$15</span>
+              <span class="add" @click="add(menu)">
+                <img src="/svg/plus.svg" alt="add to cart">
+              </span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      pricerange: null,
+      selectedCat: 'All',
+      categories: [
+        'All',
+        'House Specialty',
+        'Nicolini Special',
+        'Calzones',
+        'Cold Subs',
+        'Hot Subs',
+        'Steak Subs',
+        'Gyro',
+        'Charboiled',
+        'Wraps',
+        'Specialty Wraps',
+        'Nicolini Famous',
+        'Cold Sandwiches',
+        'Dinners',
+        'Omelette Subs',
+        'Baked Pasta',
+        'Salads',
+        'Side Orders',
+        'Beverages',
+        'Kids Meals'
+      ]
+    }
+  },
+  methods: {
+    add (menu) {
+      alert(`menu ${menu} added!`)
+    }
+  }
+}
+</script>
+
+
+<style lang="scss" scoped>
+nav.top-nav {
+  height: 55px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 5%;
+  font-family: 'Playfair Display', serif;
+  
+  .links {
+    li {
+      display: inline-block;
+      a {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+nav.shop-nav {
+  height: 60px;
+  align-items: center;
+  background: $grey;
+  display: grid;
+  grid-template-areas:
+    ". PriceRange . Checkout";
+  grid-template-columns: repeat(4, 1fr);
+
+  .price-range {
+    grid-area: PriceRange;
+    select {
+      border: none;
+      font-size: 1rem;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .checkout {
+    grid-area: Checkout;
+    display: flex;
+    align-items: center;
+    .cart {
+      position: relative;
+      margin-right: 5vw;
+      img {
+        width: 1.75rem;
+      }
+      .count {
+        position: absolute;
+        font-size: 0.5rem;
+        border-radius: 50%;
+        background: $red;
+        color: white;
+        top: -0.25rem;
+        left: -0.25rem;
+        font-size: 0.65rem;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    }
+    button.confirm {
+      background: $blue;
+      border-radius: 3px;
+      color: white;
+      padding: 0.5rem 2rem;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 1rem 5%;
+  
+  .section-title {
+    font-weight: bold;
+    color: $dark-grey;
+    font-size: 1.25rem;
+  }
+
+  .categories {
+    padding: 0 10%;
+    .cats {
+      padding-top: 0.25rem;
+      li {
+        list-style: none;
+        margin: 1rem 0.25rem;
+        cursor: pointer;
+
+        &.selected {
+          a {
+            background: rgba(251, 114, 3, 0.26);
+            border-radius: 3px;
+            color: $red;
+            margin-left: -0.25rem;
+            font-size: 0.95rem;
+            padding: 0.2rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .specialty {
+    .section-title {
+      color: $red;
+      margin-bottom: 1.5rem;
+    }
+    .menus {
+      display: grid;
+      justify-content: center;
+      grid-gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+      .menu {
+        border-radius: 4px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+        .food-pic {
+          width: 100%;
+        }
+        .title, .price-buy {
+          padding: 0rem 1rem;
+        }
+        .price-buy {
+          display: flex;
+          justify-content: space-between;
+          height: 50px;
+          align-items: center;
+          .price {
+            font-size: 0.85rem;
+            font-weight: bold;
+          }
+          .add {
+            cursor: pointer;
+            img {
+              width: 1.5rem;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.page {
+  section {
+    &.banner {
+      background: url('/img/yummy-pizza-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 25vh 5vw 30vh;
+      color: white;
+
+      .main-message {
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 55px;
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+
+      .sub-message {
+        font-size: 22px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+</style>
