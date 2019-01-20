@@ -1,0 +1,221 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {}
+
+nav {
+  background: #FFFFFF;
+  height: 55px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul .first-child {
+  text-align: right;
+  color: #FF4D00;
+}
+
+nav ul :nth-child(2) {
+  position: relative;
+}
+
+ul li span {
+  position: absolute;
+  top: -14px;
+  right: 37px;
+  font-size: .7em;
+  background: #0F86EA;
+  color: white;
+  padding: 2px 9px;
+  text-align: center;
+  border-radius: 0.5px;
+  box-shadow: 0 0 1px #333;
+  color: #FFFFFF;
+}
+
+nav ul :nth-child(3) {
+  margin-left: -2.3rem;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  padding: 30px;
+  line-height: 19px;
+  font-size: 16px;
+  text-align: center;
+  color: #4E4E4E;
+}
+
+header .banner {
+  background-image: url("../images/brenna-huff-1169540-unsplash-min-min.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 79vh;
+  background-position: center;
+  padding-top: 9.3rem;
+  padding-left: 6rem;
+}
+
+.banner h1 {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 74px;
+  font-size: 55px;
+  color: #FFFFFF;
+}
+
+.banner h5 {
+  line-height: 27px;
+  font-size: 22px;
+  color: #FFFFFF;
+}
+
+header .bottom-nav {
+  background: #F4F4F4;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-nav .price,
+.bottom-nav .checkout {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-nav .price {
+  margin-left: 13rem;
+}
+
+.bottom-nav .price p {
+  line-height: 21px;
+  font-size: 18px;
+  color: #4E4E4E;
+  padding-right: 0.5rem;
+}
+
+.bottom-nav .checkout {
+  margin-left: 7.5rem;
+}
+.checkout > div {
+  position: relative;
+}
+.checkout span {
+  position: absolute;
+  top: 0.1vh;
+  right: 1.2vw;
+  background: #FF4D00;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #333;
+  color: #FFFFFF;
+  line-height: 21px;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.checkout input[type="submit"] {
+  height: 40px;
+  background: #355DFF;
+  border-radius: 3px;
+  padding: 0.5rem 1.5rem;
+  line-height: 21px;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-left: 5rem;
+}
+
+main {
+  background: #E5E5E5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  height: 70%;
+  width: 90%;
+  grid-gap: 20px;
+}
+main .categories {
+  border: 2px solid red;
+  /* margin: 10px; */
+  /* width: 200px; */
+  height: 70vh;
+  grid-column: 1/2;
+}
+.categories #cat-head {
+font-style: normal;
+font-weight: bold;
+line-height: 32px;
+font-size: 24px;
+color: #535353;
+}
+.categories p {
+  line-height: 23px;
+font-size: 18px;
+color: #535353;
+}
+.categories #all {
+color: #FF4D00;
+}
+
+.nico-drop {
+  display: flex;
+}
+.nico-drop img {
+  /* color: #FF4D00; */
+/* transform: matrix(0, 1, 1, 0, 0, 0); */
+}
+main .specialty {
+  background-color: rgb(23, 11, 128);
+  /* repeat(auto-fit, minmax(200px, 1fr)); */
+  /* width: 400px; */
+  height: 100vh;
+  grid-column: 2/-1;
+}
+.specialty #house {
+font-style: normal;
+font-weight: bold;
+line-height: 32px;
+font-size: 24px;
+color: #FF4C00;
+}
+.specialty .picture-log .food-roll {
+width: 200px;
+height: 200px;
+background-color: #fff;
+}
+.picture-log .food-roll img {
+  height: 150px;
+  width: 200px;
+}
+/*  */
+.specialty .picture-log .monicon {
+/* display: flex; */
+/* justify-content: space-between; */
+position: relative;
+}
+.specialty .picture-log .monicon img {
+  width: 2vw;
+  position: absolute;
+  top: -67px;
+  right: 3vw;
+}
+
+
+section {
+  background: #E5E5E5;
+}
