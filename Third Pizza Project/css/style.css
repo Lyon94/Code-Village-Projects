@@ -1,0 +1,185 @@
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #fff;
+}
+
+nav {
+  background: #FFFFFF;
+  height: 55px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul .first-child {
+  text-align: right;
+  color: #FF4D00;
+}
+
+nav ul :nth-child(2) {
+  position: relative;
+}
+
+ul li span {
+  position: absolute;
+  top: -14px;
+  right: 37px;
+  font-size: .7em;
+  background: #0F86EA;
+  color: white;
+  padding: 2px 9px;
+  text-align: center;
+  border-radius: 0.5px;
+  box-shadow: 0 0 1px #333;
+  color: #FFFFFF;
+}
+
+nav ul :nth-child(3) {
+  margin-left: -2.3rem;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  padding: 30px;
+  line-height: 19px;
+  font-size: 16px;
+  text-align: center;
+  color: #4E4E4E;
+}
+header .checkout {
+  background-image: url("../images/Rectangle (4).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 59vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout h1 {
+  font-style: normal;
+font-weight: bold;
+line-height: 74px;
+font-size: 55px;
+color: #FFFFFF;
+}
+header .bottom-nav {
+  background: #F4F4F4;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7rem;
+}
+.bottom-nav p {
+  padding-right: 2rem;
+  line-height: 21px;
+font-size: 18px;
+color: #4E4E4E;
+opacity: 0.6;
+}
+
+section {
+  background: #E5E5E5;
+  max-width: 80%;
+  border: 2px solid rebeccapurple;
+  margin: 0 auto;
+  display: flex;
+flex-direction: column;
+}
+section .heading {
+  text-align: center;
+  padding: 1rem 0;
+  font-style: normal;
+font-weight: bold;
+line-height: 32px;
+font-size: 24px;
+color: #FF4D00;
+}
+
+section .items {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.items >p {
+  line-height: 22px;
+font-size: 20px;
+
+color: #4E4E4E;
+
+}
+
+.grilled {
+  margin-right: 12rem;
+  display: flex;
+}
+.grilled > p {
+/* padding-left: 1rem; */
+position: absolute;
+top: 7.0vh;
+left: 10vw;
+}
+
+.one {
+  display: flex;
+}
+.one p {
+  display: inline-block;
+  background: rgba(196, 196, 196, 0.1);
+border: 1px solid rgba(78, 78, 78, 0.6);
+box-sizing: border-box;
+border-radius: 4px;
+
+height: 18px;
+width: 40px;
+line-height: 22px;
+font-size: 20px;
+/* margin: 0 37px; */
+/* padding: 0 35px; */
+color: #000000;
+position: absolute;
+top: 9vh;
+left: 40vw;
+/* padding: 1px 3px; */
+/* text-align: center; */
+/* vertical-align: middle; */
+/* padding-bottom: 9.5px ; */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.one :first-child{
+padding-right: 1rem;
+
+}
+.one :last-child {
+  padding-left: 3rem;
+}
+
+ .items #dollar {
+  line-height: 22px;
+font-size: 20px;
+/* margin-left: 12rem; */
+color: #000000;
+/* position: absolute; */
+top: 29vh;
+/* left: 40vw; */
+}

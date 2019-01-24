@@ -183,6 +183,8 @@ main .specialty {
   background-color: rgb(23, 11, 128);
   /* repeat(auto-fit, minmax(200px, 1fr)); */
   /* width: 400px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   height: 100vh;
   grid-column: 2/-1;
 }
@@ -197,6 +199,7 @@ color: #FF4C00;
 width: 200px;
 height: 200px;
 background-color: #fff;
+margin-top: 20px;
 }
 .picture-log .food-roll img {
   height: 150px;
@@ -204,8 +207,8 @@ background-color: #fff;
 }
 /*  */
 .specialty .picture-log .monicon {
-/* display: flex; */
-/* justify-content: space-between; */
+display: flex;
+justify-content: space-between;
 position: relative;
 }
 .specialty .picture-log .monicon img {
