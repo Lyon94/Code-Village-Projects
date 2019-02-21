@@ -101,6 +101,9 @@ color: #9AA6CE;
 .three {
   padding-bottom: 1.59rem;
 }
+.right-last {
+  color: rgb(202, 205, 216);
+}
 .test {
   width: 71px;
 height: 22px;
@@ -117,6 +120,9 @@ justify-content: center;
 /* margin-bottom: 0; */
 /* margin-top: 1.5rem; */
 margin-bottom: -2rem;
+}
+.b-result {
+  width: 82px;
 }
 .uzi {
   width: 32px;
