@@ -22,6 +22,9 @@ border-radius: 9px;
   /* align-items: center; */
   /* border-bottom: 1px solid #000; */
 }
+.january2019 img {
+  cursor: pointer;
+}
 .january {
   display: flex;
   /* align-items: center; */

@@ -97,3 +97,6 @@ background: #43ACFF;
   margin-left: 9.5rem;
   margin-right: 11.3rem;
 }
+.documentation-details .morfix .blueline, .documentation-details .dropped .blueline, .documentation-details .last .blueline {
+  background: #33CDBA;
+}
